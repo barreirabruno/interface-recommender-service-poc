@@ -1,0 +1,13 @@
+<h2>Incentivadores disponíveis</h2>
+<div class="sponsor-box">
+  <div class="sponsor" *ngIf="availableSponsorData.nome.length > 0; else loading">
+    <strong>Nome</strong>: {{availableSponsorData.nome}}<br/>
+    <strong>CNPJ</strong>: {{availableSponsorData.cgccpf}}<br/>
+    <strong>Total Doado</strong>: {{availableSponsorData.total_doado}}<br/>
+    <a class="recommendation-button">Incentivadores similares</a>
+  </div>
+</div>
+<ng-template #loading>
+  <h3>{{loadingSponsorMessage}}</h3>
+</ng-template>
+
