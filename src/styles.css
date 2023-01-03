@@ -28,26 +28,3 @@ app-top-bar h1 {
   margin: 0;
 }
 
-/* Recommendation button */
-
-/* Sponsor boxes */
-
-
-/* .container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
-} */
-
-/* .single_sponsor_box {
-  /* display: inline-block;
-  margin: 10px 0 0 2%;
-  flex-grow: 1;
-  height: 100px;
-  width: calc(100% * (1/4) - 10px - 1px); */
-  /* width: 25%;
-  box-sizing: border-box; */
-  /* height: 100px;
-  background: blue; */
-
