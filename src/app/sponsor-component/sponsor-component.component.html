@@ -5,10 +5,15 @@
     <strong>CNPJ</strong>: {{availableSponsorData.cgccpf}}<br/>
     <strong>Total Doado</strong>: {{availableSponsorData.total_doado | currency:'BRL':true}}<br/>
     <app-recommendation-component
+      *ngIf="btnRecommendation"
       [sponsorId]="availableSponsorData.idSalic"
       (notify)="onNotify(availableSponsorData.idSalic)">
     </app-recommendation-component>
-    <div *ngIf="recommendationArea === true">
+    <app-search-sponsor
+    *ngIf="!btnRecommendation"
+    (notify)="serchSponsorNotify()">
+    </app-search-sponsor>
+    <div *ngIf="recommendationArea">
       <h4>Incentivadores similares encontrados:</h4>
       <app-recommendation-box
         [sponsor]="recommendation">

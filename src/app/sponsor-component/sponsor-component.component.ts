@@ -24,6 +24,8 @@ export class SponsorComponentComponent {
 
   recommendationArea = false
 
+  btnRecommendation = true
+
   constructor(
     private readonly httpRequestService: HttpRequestService
   ) {}
@@ -42,6 +44,7 @@ export class SponsorComponentComponent {
   }
 
   onNotify(sponsorId: string) {
+    this.btnRecommendation = false
     this.httpRequestService.getRecommendationSponsorRequest(sponsorId)
       .subscribe(data => {
         const requests = this.httpRequestService.getSponsorById(data)
@@ -51,5 +54,11 @@ export class SponsorComponentComponent {
         })
         this.recommendationArea = true
       })
+  }
+
+  serchSponsorNotify() {
+    this.recommendationArea = false
+    this.btnRecommendation = true
+    this.availableSponsors()
   }
 }
