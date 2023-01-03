@@ -1,0 +1,17 @@
+.recommendation-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 2px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #FAD02C;
+  color: #212121;
+  border: none;
+}
+
+.recommendation-button:hover {
+  background-color: #212121;
+  color: #FAD02C;
+  font-weight: bold;
+}
