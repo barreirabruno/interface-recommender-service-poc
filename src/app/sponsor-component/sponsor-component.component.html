@@ -1,13 +1,23 @@
-<h2>Incentivadores disponíveis</h2>
 <div class="sponsor-box">
   <div class="sponsor" *ngIf="availableSponsorData.nome.length > 0; else loading">
+    <h4>Incentivadores disponíveis</h4>
     <strong>Nome</strong>: {{availableSponsorData.nome}}<br/>
     <strong>CNPJ</strong>: {{availableSponsorData.cgccpf}}<br/>
-    <strong>Total Doado</strong>: {{availableSponsorData.total_doado}}<br/>
-    <a class="recommendation-button">Incentivadores similares</a>
+    <strong>Total Doado</strong>: {{availableSponsorData.total_doado | currency:'BRL':true}}<br/>
+    <app-recommendation-component
+      [sponsorId]="availableSponsorData.idSalic"
+      (notify)="onNotify(availableSponsorData.idSalic)">
+    </app-recommendation-component>
+    <div *ngIf="recommendationArea === true">
+      <h4>Incentivadores similares encontrados:</h4>
+      <app-recommendation-box
+        [sponsor]="recommendation">
+      </app-recommendation-box>
+    </div>
   </div>
 </div>
 <ng-template #loading>
   <h3>{{loadingSponsorMessage}}</h3>
 </ng-template>
+
 
