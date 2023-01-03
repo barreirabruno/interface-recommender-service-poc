@@ -1,0 +1,14 @@
+.sponsor-box {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
+.sponsor {
+  font-size: 1rem;
+  border: 1px solid #212121;
+  border-radius: 0.5rem;
+  margin: -1px;
+  padding: 50px 50px
+}

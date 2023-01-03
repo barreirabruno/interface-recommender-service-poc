@@ -1,0 +1,7 @@
+<div class="sponsor-box">
+  <div class="sponsor" *ngFor="let sponsorR of sponsor | slice:1">
+    <strong>Nome</strong>: {{sponsorR.nome}}<br/>
+    <strong>CNPJ</strong>: {{sponsorR.cgccpf}}<br/>
+    <strong>Total Doado</strong>: {{sponsorR.total_doado | currency:'BRL':true}}<br/>
+  </div>
+</div>
