@@ -11,6 +11,7 @@ import { SponsorComponentComponent } from './sponsor-component/sponsor-component
 import { HttpRequestService } from './sponsor-component/http-request-service';
 import { RecommendationComponentComponent } from './recommendation-component/recommendation-component.component';
 import { RecommendationBoxComponent } from './recommendation-box/recommendation-box.component';
+import { SearchSponsorComponent } from './search-sponsor/search-sponsor.component';
 
 registerLocaleData(ptBr);
 @NgModule({
@@ -19,7 +20,8 @@ registerLocaleData(ptBr);
     TopBarComponent,
     SponsorComponentComponent,
     RecommendationComponentComponent,
-    RecommendationBoxComponent
+    RecommendationBoxComponent,
+    SearchSponsorComponent
   ],
   imports: [
     BrowserModule,
