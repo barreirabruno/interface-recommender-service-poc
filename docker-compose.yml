@@ -1,0 +1,7 @@
+version: '3.3'
+services:
+  angular-docker:
+    container_name: interface-recommendation-service
+    build: .
+    ports:
+      - '9000:80'
